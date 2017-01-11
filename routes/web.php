@@ -15,3 +15,10 @@ Route::get('', [
     'as' => 'public.index.index',
     'uses' => 'IndexController@index'
 ]);
+
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function() {
+    Route::get('', [
+        'as' => 'admin.index.index',
+        'uses' => 'IndexController@index'
+    ]);
+});
